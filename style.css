@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
+  background: radial-gradient(circle at center, #1e1e1e, #000);
+  color: #f0f0f0;
+  overflow-x: hidden;
+}
+
+/* خلفية نجوم متحركة */
+@keyframes stars {
+  from {background-position: 0 0;}
+  to {background-position: 10000px 10000px;}
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://i.ibb.co/ZYW3VTp/animated-stars.gif');
+  animation: stars 200s linear infinite;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+/* العنوان */
+h1 {
+  text-align: center;
+  color: gold;
+  text-shadow: 0 0 10px #b8b8b8;
+  margin-top: 30px;
+}
+
+/* البطاقات */
+.term {
+  background: linear-gradient(145deg, #2c2c2c, #1a1a1a);
+  border: 2px solid gold;
+  border-radius: 15px;
+  margin: 20px auto;
+  padding: 20px;
+  width: 80%;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+  transition: 0.3s;
+}
+
+.term:hover {
+  box-shadow: 0 0 40px gold;
+  transform: scale(1.02);
+}
+
+/* الأزرار */
+button {
+  background: linear-gradient(to right, #c0a000, #6e6e6e);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: gold;
+  color: #000;
+  box-shadow: 0 0 20px #fff;
+}
+
+/* زر السماع */
+.listen-btn {
+  display: block;
+  margin: 15px auto 0;
+}
